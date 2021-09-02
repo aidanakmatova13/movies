@@ -16,10 +16,20 @@ img{
 }
 .container{
     max-width: 1170px;
+    margin: auto;
+    text-align: center;
 }
 .grid{
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 30px;
     align-items: center;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
 }

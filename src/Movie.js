@@ -1,16 +1,22 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {useParams} from 'react-router-dom'
+import {useHistory} from "react-router-dom";
 
 const Movie = () =>{
     const [info, setInfo] = useState({})
+    const history = useHistory()
     const {id} = useParams()
     useEffect(() =>{
         axios(`https://api.themoviedb.org/3/movie/${id}?api_key=6f19f87e3380315b9573c4270bfc863c`)
             .then(({data}) => setInfo(data))
     }, [id])
+    const Back = () =>{
+        history.goBack()
+    }
     return(
         <div className='container'>
+            <button onClick={Back}>&laquo; Go back</button>
         <div className='grid'>
             <div>
                 <h3>{info.original_title}</h3>

@@ -17,7 +17,7 @@ const Page = () => {
         <div className='container'>
             {
                 Array(6).fill(0).map((el, idx) =>
-                    <button onClick={() => handlePage(idx+1)}>{idx+1}</button>
+                    <button className='btn' onClick={() => handlePage(idx+1)}>{idx+1}</button>
                 )
             }
             <div className='row'>
