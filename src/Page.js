@@ -5,12 +5,19 @@ import {Link} from "react-router-dom";
 const Page = () => {
     const [page, setPage] = useState(1)
     const [movie, setMovie] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
         axios(`https://api.themoviedb.org/3/discover/movie?page=${page}&language='rus'&api_key=6f19f87e3380315b9573c4270bfc863c`)
-            .then(({data}) => setMovie(data.results))
+            .then(({data}) => {
+                setMovie(data.results)
+                setIsLoading(false)
+            })
     }, [page]) //required
     const handlePage = (num) => {
         setPage(num)
+    }
+    if (isLoading){
+        return <div className='container'>Loading ...</div>
     }
     return (
         <div className='container'>

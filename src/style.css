@@ -20,9 +20,8 @@ img{
 }
 .grid{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.5fr 2fr;
     grid-column-gap: 30px;
-    align-items: center;
 }
 a{
     text-decoration: none;
