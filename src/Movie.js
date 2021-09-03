@@ -69,11 +69,6 @@ const Movie = () =>{
                     </div>
                 </div>
                 <h3>Cast:</h3>
-                {/*{*/}
-                {/*    Array(10).fill(0).map((el, idx) =>*/}
-                {/*        <button className='btn' onClick={() => handlePage(idx+1)}>{idx+1}</button>*/}
-                {/*    )*/}
-                {/*}*/}
                 <div className='row'>
                     {
                         actor.map(el =>
@@ -89,5 +84,4 @@ const Movie = () =>{
             </div>
         )
 }
-
 export default Movie
