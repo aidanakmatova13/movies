@@ -79,3 +79,11 @@ body.dark-mode {
     background-color: #1a1919;
     color: #999;
 }
+.box{
+    transition: .6s;
+    padding: 10px;
+}
+.box:hover{
+    box-shadow: -1px -5px 32px 0 rgba(255, 255, 255, 0.2);
+    transform: scale(0.9);
+}
