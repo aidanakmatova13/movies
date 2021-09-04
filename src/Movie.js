@@ -100,12 +100,17 @@ const Movie = () =>{
                 </OwlCarousel >
                 </div>
                 <h3>Trailers: </h3>
-                <div>
+                <div className='grid-2'>
                     {
                         trailers.map(el =>
                             <>
                                 <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={el.key} onClose={() => setOpen(false)} />
                                 <button className="btn-primary" onClick={()=> setOpen(true)}>
+                                    <svg className="circle-fill">
+                                        <circle cx="41" cy="41" r="37" stroke="transparent" opacity='0.7' stroke-width="1"></circle>
+                                        <polygon fill="white" stroke="transparent" stroke-width="1"
+                                                 points="32,25 32,58 60,42"></polygon>
+                                    </svg>
                                     <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${info.poster_path}`} alt=""/>
                                 </button>
                             </>

@@ -52,4 +52,21 @@ a{
 .btn-primary{
     color: black;
     cursor: pointer;
+    position: relative;
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+.circle-fill{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+.circle-fill polygon{
+    transition: .4s;
+}
+.circle-fill:hover polygon{
+    fill: grey;
 }
