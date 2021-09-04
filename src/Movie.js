@@ -52,7 +52,7 @@ const Movie = () =>{
                     <div>
                         <h2>{info.original_title}</h2>
                         <div key={info.id}>{info.release_date}({info.production_countries.map(el => el.iso_3166_1)})</div>
-                        <div>
+                        <div key={info.id}>
                                 <h4>Genre: </h4>
                                 {
                                     info.genres.map(el =>
@@ -62,7 +62,7 @@ const Movie = () =>{
                                     )
                                 }
                         </div>
-                        <div><h4>Countries: </h4> {
+                        <div key={info.id}><h4>Countries: </h4> {
                             info.production_countries.map(el =>
                                 <p>
                                     {el.name}
