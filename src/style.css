@@ -65,7 +65,7 @@ a{
     left: 100px;
 }
 .circle-fill polygon{
-    transition: .4s;
+    transition: .2s;
 }
 .circle-fill:hover polygon{
     fill: grey;
