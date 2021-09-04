@@ -8,6 +8,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import ModalVideo from 'react-modal-video'
 
+
 const Movie = () =>{
     const [info, setInfo] = useState({})
     const [actor, setActor] = useState([])
@@ -50,7 +51,7 @@ const Movie = () =>{
                     </div>
                     <div>
                         <h2>{info.original_title}</h2>
-                        <div>{info.release_date}({info.production_countries.map(el => el.iso_3166_1)})</div>
+                        <div key={info.id}>{info.release_date}({info.production_countries.map(el => el.iso_3166_1)})</div>
                         <div>
                                 <h4>Genre: </h4>
                                 {

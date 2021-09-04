@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 import Movie from "./Movie";
 import Actor from "./Actor";
 
+
+
 function App() {
   return (
       <Router>
