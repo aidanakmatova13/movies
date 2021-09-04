@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 
+
 const Page = () => {
     const [page, setPage] = useState(1)
     const [movie, setMovie] = useState([])
@@ -41,6 +42,7 @@ const Page = () => {
             }
             </div>
         </div>
+
     )
 }
 export default Page;
