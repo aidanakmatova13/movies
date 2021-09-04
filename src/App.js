@@ -4,7 +4,6 @@ import Movie from "./Movie";
 import Actor from "./Actor";
 
 
-
 function App() {
   return (
       <Router>
@@ -28,7 +27,7 @@ export default App;
 // Сборы
 // Вывести актеров, их должно быть максимум 10
 // если их больше то кнопка смотреть больше
-// Трейлер если он есть
+// Трейлер если он есть +
 
 
 // Актер +
