@@ -22,7 +22,7 @@ const Actor = () =>{
     }
     return(
         <div className='container'>
-            <button onClick={Back}> &laquo; Go back</button>
+            <button className='back-btn' onClick={Back}> &laquo; Go back</button>
             {
                 <>
                     <div className='grid'>
@@ -50,4 +50,5 @@ const Actor = () =>{
         </div>
     )
 }
-export default Actor
+
+export default Actor;

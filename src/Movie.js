@@ -1,15 +1,23 @@
 import {useEffect, useState} from "react";
-import axios from "axios";
-import {Link, useParams} from 'react-router-dom'
+import {Link, useParams} from "react-router-dom";
 import {useHistory} from "react-router-dom";
-import man from './Image/avatar.jpg'
+import axios from "axios";
+import man from './Image/avatar.jpg';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import ModalVideo from 'react-modal-video'
 
 const Movie = () =>{
     const [info, setInfo] = useState({})
     const [actor, setActor] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const [actorLoading, setActorIsLoading] = useState(true)
+    const [trailers, setTrailers] = useState([])
+    const [isOpen, setOpen] = useState(false)
     const history = useHistory()
     const {id} = useParams()
+
     useEffect(() =>{
         axios(`https://api.themoviedb.org/3/movie/${id}?api_key=6f19f87e3380315b9573c4270bfc863c`)
             .then(({data}) => {
@@ -17,17 +25,25 @@ const Movie = () =>{
                 setIsLoading(false)
             })
         axios(`https://api.themoviedb.org/3/movie/${id}/credits?&language=%27rus%27&api_key=6f19f87e3380315b9573c4270bfc863c`)
-            .then(({data}) => setActor(data.cast))
+            .then(({data}) => {
+                setActor(data.cast)
+                setActorIsLoading(false)
+            })
+        axios(`https://api.themoviedb.org/3/movie/${id}/videos?&language=%27rus%27&api_key=6f19f87e3380315b9573c4270bfc863c`)
+            .then(({data}) =>{
+                setTrailers(data.results)
+            })
     }, [id])
     const Back = () =>{
         history.goBack()
     }
-    if (isLoading){
+
+    if (isLoading && actorLoading){
         return <div className='container'>Loading ...</div>
     }
         return(
             <div className='container'>
-                <button onClick={Back}>&laquo; Go back</button>
+                <button className='back-btn' onClick={Back}>&laquo; Go back</button>
                 <div className='grid'>
                     <div>
                         <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${info.backdrop_path}`} alt={info.title}/>
@@ -70,18 +86,34 @@ const Movie = () =>{
                 </div>
                 <h3>Cast:</h3>
                 <div className='row'>
+                <OwlCarousel className='owl-theme' items={8} loop margin={10} dots={false}>
                     {
                         actor.map(el =>
-                            <div key={el.id} className='col-3'>
+                            <div key={el.id}>
                                 <Link to={`/person/${el.id}`} key={el.name}>
-                                    {el.profile_path === null ? <img src={man} alt="" height='400' width='300'/> :<img src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.profile_path}`} alt=""/>}
+                                    {el.profile_path === null ? <img src={man} alt="" height='210' width='300'/> :<img src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.profile_path}`} alt=""/>}
                                     <h3>{el.name}</h3>
                                 </Link>
                             </div>
+                        )
+                    }
+                </OwlCarousel >
+                </div>
+                <h3>Trailers: </h3>
+                <div>
+                    {
+                        trailers.map(el =>
+                            <>
+                                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={el.key} onClose={() => setOpen(false)} />
+                                <button className="btn-primary" onClick={()=> setOpen(true)}>
+                                    <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${info.poster_path}`} alt=""/>
+                                </button>
+                            </>
                         )
                     }
                 </div>
             </div>
         )
 }
-export default Movie
+
+export default Movie;
