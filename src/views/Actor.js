@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {Link, useHistory, useParams} from "react-router-dom";
+import Loading from "../components/Loading";
 
 const Actor = () =>{
     const [actorInfo, setActorInfo] = useState({})
@@ -25,7 +26,7 @@ const Actor = () =>{
         history.goBack()
     }
     if (isLoading && moviesLoading){
-        return <div className='container'>Loading ...</div>
+        return <Loading/>
     }
     return(
         <div className='container'>

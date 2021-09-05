@@ -7,6 +7,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import ModalVideo from 'react-modal-video'
+import Loading from "../components/Loading";
 
 
 const Movie = () =>{
@@ -40,7 +41,7 @@ const Movie = () =>{
     }
 
     if (isLoading && actorLoading){
-        return <div className='container'>Loading ...</div>
+        return <Loading/>
     }
         return(
             <div className='container'>
