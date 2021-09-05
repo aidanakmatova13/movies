@@ -2,6 +2,7 @@ import Page from "./Page";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Movie from "./Movie";
 import Actor from "./Actor";
+import Cast from "./Cast";
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
       <Router>
           <Route exact path='/'><Page/></Route>
           <Route path='/movie/:id'><Movie/></Route>
-          <Route path='/person/:id'><Actor/></Route>
+          <Route path='/actor/:id'><Actor/></Route>
+          <Route path='/cast/:id'><Cast/></Route>
       </Router>
   );
 }

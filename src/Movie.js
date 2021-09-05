@@ -87,17 +87,18 @@ const Movie = () =>{
                 </div>
                 <h3>Cast:</h3>
                 <div className='row'>
-                <OwlCarousel className='owl-theme' items={8} loop margin={10} dots={false}>
+                <OwlCarousel className='owl-theme' items={8} margin={10} dots={false}>
                     {
-                        actor.map(el =>
+                        actor.slice(0,10).map(el =>
                             <div className='box' key={el.id}>
-                                <Link to={`/person/${el.id}`} key={el.name}>
+                                <Link to={`/actor/${el.id}`} key={el.name}>
                                     {el.profile_path === null ? <img src={man} alt="" height='210' width='300'/> :<img src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.profile_path}`} alt=""/>}
                                     <h3>{el.name}</h3>
                                 </Link>
                             </div>
                         )
                     }
+                    <Link to={`/cast/${id}`}>Show all cast</Link>
                 </OwlCarousel >
                 </div>
                 <h3>Trailers: </h3>
