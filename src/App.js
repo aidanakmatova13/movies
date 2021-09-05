@@ -1,9 +1,8 @@
-import Page from "./Page";
+import Page from "./views/Page";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import Movie from "./Movie";
-import Actor from "./Actor";
-import Cast from "./Cast";
-
+import Movie from "./views/Movie";
+import Actor from "./views/Actor";
+import Cast from "./views/Cast";
 
 function App() {
   return (
@@ -26,9 +25,9 @@ export default App;
 // Описание +
 // Язык +
 // Бюджет +
-// Сборы
+// Сборы +git
 // Вывести актеров, их должно быть максимум 10
-// если их больше то кнопка смотреть больше
+// если их больше то кнопка смотреть больше +
 // Трейлер если он есть +
 
 // Актер +
@@ -37,11 +36,9 @@ export default App;
 // За что известен (с постерами)
 // Хронология (Актерское искусство)
 // Персональная инофрмация +
-//
 // Известность за +
 // Известно авторство +
 // Пол +
 // Дата рождения +
-//
 // Место рождения +
 // Также известность как +

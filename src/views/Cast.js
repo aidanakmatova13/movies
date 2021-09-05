@@ -1,7 +1,7 @@
 import {useState} from "react";
 import axios from "axios";
 import {Link, useHistory, useParams} from "react-router-dom";
-import man from "./Image/avatar.jpg";
+import man from "../Image/avatar.jpg";
 
 const Cast = () =>{
     const [cast, setCast] = useState()
