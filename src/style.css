@@ -81,7 +81,7 @@ body.dark-mode {
 }
 .box{
     transition: .6s;
-    padding: 10px;
+    padding: 5px;
 }
 .box:hover{
     box-shadow: -1px -5px 32px 0 rgba(255, 255, 255, 0.2);
