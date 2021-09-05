@@ -1,14 +1,15 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {Link, useHistory, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import Loading from "../components/Loading";
+import Movies from "../components/Movies";
+import ButtonBack from "../components/ButtonBack";
 
 const Actor = () =>{
     const [actorInfo, setActorInfo] = useState({})
     const [movies, setMovies] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [moviesLoading, setMoviesIsLoading] = useState(true)
-    const history = useHistory()
     const {id} = useParams()
     useEffect(() =>{
         axios(`https://api.themoviedb.org/3/person/${id}?api_key=6f19f87e3380315b9573c4270bfc863c`)
@@ -22,15 +23,12 @@ const Actor = () =>{
                 setMoviesIsLoading(false)
             })
     }, [id])
-    const Back = () =>{
-        history.goBack()
-    }
     if (isLoading && moviesLoading){
         return <Loading/>
     }
     return(
         <div className='container'>
-            <button className='back-btn' onClick={Back}> &laquo; Go back</button>
+            <ButtonBack/>
             {
                 <>
                     <div className='grid'>
@@ -56,18 +54,7 @@ const Actor = () =>{
                 </>
             }
             <h3>Movies:</h3>
-            <div className='grid-2' key={movies.id}>
-                {
-                    movies.map(el =>
-                        <div className='box'>
-                        <Link to={`/movie/${el.id}`} key={el.id}>
-                            <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${el.poster_path}`} alt=""/>
-                            <h3>{el.original_title}</h3>
-                        </Link>
-                        </div>
-                    )
-                }
-            </div>
+            <Movies movies={movies}/>
         </div>
     )
 }

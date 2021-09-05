@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
-import {useHistory} from "react-router-dom";
 import axios from "axios";
 import man from '../Image/avatar.jpg';
 import OwlCarousel from 'react-owl-carousel';
@@ -8,6 +7,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import ModalVideo from 'react-modal-video'
 import Loading from "../components/Loading";
+import ButtonBack from "../components/ButtonBack";
 
 
 const Movie = () =>{
@@ -17,7 +17,6 @@ const Movie = () =>{
     const [actorLoading, setActorIsLoading] = useState(true)
     const [trailers, setTrailers] = useState([])
     const [isOpen, setOpen] = useState(false)
-    const history = useHistory()
     const {id} = useParams()
 
     useEffect(() =>{
@@ -36,16 +35,13 @@ const Movie = () =>{
                 setTrailers(data.results)
             })
     }, [id])
-    const Back = () =>{
-        history.goBack()
-    }
 
     if (isLoading && actorLoading){
         return <Loading/>
     }
         return(
             <div className='container'>
-                <button className='back-btn' onClick={Back}>&laquo; Go back</button>
+                <ButtonBack/>
                 <div className='grid'>
                     <div>
                         <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${info.backdrop_path}`} alt={info.title}/>
