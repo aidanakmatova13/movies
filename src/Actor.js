@@ -36,7 +36,7 @@ const Actor = () =>{
                         <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${actorInfo.profile_path}`} alt=""/>
                         <div>
                             <h3>{actorInfo.name}</h3>
-                            <div><h4>Also known as:</h4>
+                            <div key={actorInfo.id}><h4>Also known as:</h4>
                                 {actorInfo.also_known_as.map(el =>
                                     <div>{el}</div>
                                 )}
