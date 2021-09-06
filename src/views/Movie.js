@@ -36,7 +36,7 @@ const Movie = () =>{
             })
     }, [id])
 
-    if (isLoading && actorLoading){
+    if (isLoading || actorLoading){
         return <Loading/>
     }
         return(

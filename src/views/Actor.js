@@ -24,7 +24,7 @@ const Actor = () =>{
                 setMoviesIsLoading(false)
             })
     }, [id])
-    if (isLoading && moviesLoading){
+    if (isLoading || moviesLoading){
         return <Loading/>
     }
     return(
