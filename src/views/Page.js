@@ -22,11 +22,13 @@ const Page = () => {
     }
     return (
         <div className='container'>
-            {
-                Array(6).fill(0).map((el, idx) =>
-                    <button className='btn' onClick={() => handlePage(idx+1)}>{idx+1}</button>
-                )
-            }
+            <div className='btns'>
+                {
+                    Array(6).fill(0).map((el, idx) =>
+                        <button className='btn' onClick={() => handlePage(idx+1)}>{idx+1}</button>
+                    )
+                }
+            </div>
             <Movies movies={movies}/>
         </div>
 

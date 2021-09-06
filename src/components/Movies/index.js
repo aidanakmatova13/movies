@@ -13,6 +13,11 @@ const Movies = ({movies}) =>{
                     </div>
                 )
             }
+            {
+                <div>
+                    {movies.release_date.sort((a,b) => new Date(b) - new Date(b))}
+                </div>
+            }
         </div>
     )
 }

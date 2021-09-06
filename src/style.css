@@ -2,6 +2,8 @@
     box-sizing: border-box;
     font-family: 'Slabo 27px', serif;
     color: whitesmoke;
+    margin: 0;
+    padding: 0;
 }
 body{
     background-color: black;
@@ -32,15 +34,22 @@ a{
 }
 .btn{
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 200px;
     cursor: pointer;
     margin-right: 10px;
     border: 1px solid black;
-    background-color: lightgrey;
+    background-color: #EB9600;
     color: black;
+    width: 21px;
+    height: 30px;
+    font-size: 20px;
+    transition: .4s;
+}
+.btns{
+    text-align: center;
 }
 .btn:hover{
-    background-color: white;
+    background-color: navajowhite;
 }
 .back-btn{
     background-color: whitesmoke;
@@ -48,7 +57,7 @@ a{
     border: 1px solid black;
     margin-bottom: 20px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 120px;
 }
 .btn-primary{
     color: black;
@@ -90,4 +99,33 @@ body.dark-mode {
 }
 .trailer{
     margin-top: 30px;
+}
+input{
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    opacity: 1.4;
+    color: black;
+    padding: 15px;
+    font-size: 17px;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-img{
+    width: 140px;
+}
+.header{
+    background-color: #ffffff20;
+    position: fixed;
+    width: 100%;
+}
+.search-content{
+    display: flex;
+}
+.search{
+    width: 50px;
 }

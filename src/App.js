@@ -3,10 +3,12 @@ import Page from "./views/Page";
 import Movie from "./views/Movie";
 import Actor from "./views/Actor";
 import Cast from "./views/Cast";
+import Header from "./views/Header";
 
 function App() {
   return (
       <Router>
+          <Header />
           <Route exact path='/'><Page/></Route>
           <Route path='/movie/:id'><Movie/></Route>
           <Route path='/actor/:id'><Actor/></Route>
