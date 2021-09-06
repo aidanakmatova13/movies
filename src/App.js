@@ -1,5 +1,5 @@
-import Page from "./views/Page";
 import {BrowserRouter as Router, Route} from "react-router-dom";
+import Page from "./views/Page";
 import Movie from "./views/Movie";
 import Actor from "./views/Actor";
 import Cast from "./views/Cast";
@@ -16,7 +16,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
