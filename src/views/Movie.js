@@ -71,7 +71,7 @@ const Movie = () =>{
                             <h4>
                                 Runtime:
                             </h4>
-                            {Math.floor(info.runtime / 60)} hour {Math.floor(info.runtime % 60)} minutes
+                            {Math.floor(info.runtime / 60)} h {Math.floor(info.runtime % 60)} m
                         </div>
                         <div><h4>Description:</h4><div><i>{info.tagline}</i></div>{info.overview}</div>
                         {info.budget ? <div><h4>Budget:</h4>{info.budget.toLocaleString()}$</div> : ''}
