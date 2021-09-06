@@ -18,8 +18,5 @@ function App() {
 export default App;
 
 
-//Название +
-// Дата +
-// Жанр +
 
 
