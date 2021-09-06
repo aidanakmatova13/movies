@@ -87,3 +87,6 @@ body.dark-mode {
     box-shadow: -1px -5px 32px 0 rgba(255, 255, 255, 0.2);
     transform: scale(0.9);
 }
+.trailer{
+    margin-top: 30px;
+}

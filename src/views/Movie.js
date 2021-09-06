@@ -73,7 +73,7 @@ const Movie = () =>{
                             </h4>
                             {Math.floor(info.runtime / 60)} h {Math.floor(info.runtime % 60)} m
                         </div>
-                        <div><h4>Description:</h4><div><i>{info.tagline}</i></div>{info.overview}</div>
+                        {info.tagline ? <div><h4>Description:</h4><div><i>{info.tagline}</i></div>{info.overview}</div> : ''}
                         {info.budget ? <div><h4>Budget:</h4>{info.budget.toLocaleString()}$</div> : ''}
                         <div>
                             <h4>Revenue:
@@ -98,11 +98,10 @@ const Movie = () =>{
                     <Link to={`/cast/${id}`}>Show all cast</Link>
                 </OwlCarousel >
                 </div>
-                <h3>Trailers: </h3>
                 <div className='grid-2'>
                     {
                         trailers.map(el =>
-                            <>
+                            <div className='trailer'>
                                 <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={el.key} onClose={() => setOpen(false)} />
                                 <button className="btn-primary" onClick={()=> setOpen(true)}>
                                     <svg className="circle-fill">
@@ -112,7 +111,7 @@ const Movie = () =>{
                                     </svg>
                                     <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${info.poster_path}`} alt=""/>
                                 </button>
-                            </>
+                            </div>
                         )
                     }
                 </div>
