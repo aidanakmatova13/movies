@@ -37,7 +37,7 @@ const Actor = () =>{
                 <ActorInfo actorInfo={actorInfo}/>
             }
             <h3>Famous movies:</h3>
-            {/*<Movies movies={movies}/>*/}
+            <Movies movies={movies}/>
             {<div className='grid'>
                 <div>
                     <div key={actorInfo.id}><h4>Also known as:</h4>
