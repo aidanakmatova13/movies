@@ -82,7 +82,7 @@ const Movie = () =>{
                         </div>
                     </div>
                 </div>
-                <h3>Cast:</h3>
+                <h2>Cast:</h2>
                 <div className='row'>
                 <OwlCarousel className='owl-theme' items={8} margin={10} dots={false}>
                     {

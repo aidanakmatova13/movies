@@ -60,7 +60,7 @@ const Actor = () =>{
                                 <Link to={`/movie/${el.id}`}>
                                     <div className='movies-content'>
                                         <h4>{el.title}</h4>
-                                        <p className='as'>(as{el.character})</p>
+                                        <i><h4 className='as'>(as  {el.character})</h4></i>
                                     </div>
                                 </Link>
                             </div>
@@ -71,7 +71,7 @@ const Actor = () =>{
                                 <Link to={`/movie/${el.id}`}>
                                     <div className='movies-content'>
                                         <h4>{el.title}</h4>
-                                        <p className='as'>(as{el.character})</p>
+                                        <i><h4 className='as'>(as  {el.character})</h4></i>
                                     </div>
                                 </Link>
                             </div>
