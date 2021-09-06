@@ -3,6 +3,7 @@ import axios from "axios";
 import {useParams} from "react-router-dom";
 import Loading from "../components/Loading";
 import Movies from "../components/Movies";
+import {Link} from "react-router-dom";
 import ButtonBack from "../components/ButtonBack";
 import ActorInfo from "../components/ActorInfo";
 
@@ -35,23 +36,41 @@ const Actor = () =>{
             {
                 <ActorInfo actorInfo={actorInfo}/>
             }
-            <h3>Famous for movies:</h3>
+            <h3>Famous movies:</h3>
             {/*<Movies movies={movies}/>*/}
-            {
+            {<div className='grid'>
                 <div>
-                    {movies.filter(el => !el.release_date).sort((a,b) => new Date(b) - new Date(b)).map(el =>
-                        <>
-                            <h3>{el.title}</h3>
-                        </>
-                    )}
-
-
-                    {movies.filter(el =>el.release_date).sort((a,b) => new Date(b) - new Date(b)).map(el =>
-                        <>
-                            <div>{el.release_date}</div>
-                            <h3>{el.title}</h3>
-                        </>
-                    )}
+                    <div key={actorInfo.id}><h4>Also known as:</h4>
+                        {actorInfo.also_known_as.map(el =>
+                            <div>{el}</div>
+                        )}
+                    </div>
+                    <div><h4>Famous for:</h4>{actorInfo.known_for_department}</div>
+                    {actorInfo.place_of_birth ? <div><h4>Birth place:</h4>{actorInfo.place_of_birth}</div> : ''}
+                    {actorInfo.birthday ? <div><h4>Birthday:</h4>{actorInfo.birthday}</div> : ''}
+                    {
+                        actorInfo.gender === 2?<div><h4>Gender:</h4> Male</div>:<div><h4>Gender:</h4> Female</div>
+                    }
+                </div>
+                <div>
+                    <h3>Movies:</h3>
+                        {movies.filter(el => !el.release_date).sort((a,b) => new Date(a.release_date) - new Date(b.release_date)).map(el =>
+                            <div className='movies-date'>
+                                <div className='sign'>&#8212;   </div>
+                                <Link to={'/movie/:id'}>
+                                    <h4>{el.title}</h4>
+                                </Link>
+                            </div>
+                        )}
+                        {movies.filter(el =>el.release_date).sort((a,b) => new Date(a.release_date) - new Date(b.release_date)).map(el =>
+                            <div className='movies-date'>
+                                <div>{el.release_date}</div>
+                                <Link to={`/movie/${el.id}`}>
+                                    <h4>{el.title}</h4>
+                                </Link>
+                            </div>
+                        )}
+                    </div>
                 </div>
             }
         </div>

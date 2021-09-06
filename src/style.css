@@ -27,7 +27,7 @@ img{
 .grid{
     display: grid;
     grid-template-columns: 1.5fr 2fr;
-    grid-column-gap: 30px;
+    grid-column-gap: 50px;
 }
 a{
     text-decoration: none;
@@ -128,4 +128,16 @@ input{
 }
 .search{
     width: 50px;
+}
+.movies-date{
+    display: flex;
+    align-items: center;
+}
+h4{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.sign{
+    margin-right: 20px;
+    margin-left: 30px;
 }
