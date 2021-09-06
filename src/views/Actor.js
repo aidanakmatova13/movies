@@ -55,18 +55,24 @@ const Actor = () =>{
                 <div>
                     <h3>Movies:</h3>
                         {movies.filter(el => !el.release_date).sort((a,b) => new Date(a.release_date) - new Date(b.release_date)).map(el =>
-                            <div className='movies-date'>
+                            <div className='movies-content'>
                                 <div className='sign'>&#8212;   </div>
-                                <Link to={'/movie/:id'}>
-                                    <h4>{el.title}</h4>
+                                <Link to={`/movie/${el.id}`}>
+                                    <div className='movies-content'>
+                                        <h4>{el.title}</h4>
+                                        <p className='as'>(as{el.character})</p>
+                                    </div>
                                 </Link>
                             </div>
                         )}
                         {movies.filter(el =>el.release_date).sort((a,b) => new Date(a.release_date) - new Date(b.release_date)).map(el =>
-                            <div className='movies-date'>
+                            <div className='movies-content'>
                                 <div>{el.release_date}</div>
                                 <Link to={`/movie/${el.id}`}>
-                                    <h4>{el.title}</h4>
+                                    <div className='movies-content'>
+                                        <h4>{el.title}</h4>
+                                        <p className='as'>(as{el.character})</p>
+                                    </div>
                                 </Link>
                             </div>
                         )}

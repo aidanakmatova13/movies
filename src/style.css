@@ -54,10 +54,17 @@ a{
 .back-btn{
     background-color: whitesmoke;
     color: black;
-    border: 1px solid black;
+    border: none;
     margin-bottom: 20px;
     cursor: pointer;
     margin-top: 120px;
+    padding: 4px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: .6s;
+}
+.back-btn:hover{
+    margin-left: -10px;
 }
 .btn-primary{
     color: black;
@@ -129,7 +136,7 @@ input{
 .search{
     width: 50px;
 }
-.movies-date{
+.movies-content{
     display: flex;
     align-items: center;
 }
@@ -140,4 +147,7 @@ h4{
 .sign{
     margin-right: 20px;
     margin-left: 30px;
+}
+.as{
+    font-size: 18px;
 }
