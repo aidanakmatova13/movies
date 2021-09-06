@@ -82,4 +82,4 @@ const Actor = () =>{
         </div>
     )
 }
-export default Actor;
+export default Actor
