@@ -36,10 +36,10 @@ const Actor = () =>{
             {
                 <ActorInfo actorInfo={actorInfo}/>
             }
-            <h3>Famous movies:</h3>
+            <h3 className='margin'>Famous movies:</h3>
             <Movies movies={movies}/>
             {<div className='grid'>
-                <div>
+                <div className='margin'>
                     <div key={actorInfo.id}><h4>Also known as:</h4>
                         {actorInfo.also_known_as.map(el =>
                             <div>{el}</div>
@@ -53,14 +53,14 @@ const Actor = () =>{
                     }
                 </div>
                 <div>
-                    <h3>Movies:</h3>
+                    <h3 className='margin'>Movies:</h3>
                         {movies.filter(el => !el.release_date).sort((a,b) => new Date(a.release_date) - new Date(b.release_date)).map(el =>
                             <div className='movies-content'>
                                 <div className='sign'>&#8212;   </div>
                                 <Link to={`/movie/${el.id}`}>
                                     <div className='movies-content'>
                                         <h4>{el.title}</h4>
-                                        <i><h4 className='as'>(as  {el.character})</h4></i>
+                                        {el.character ? <i><h4 className='as'>(as  {el.character})</h4></i> : ''}
                                     </div>
                                 </Link>
                             </div>
@@ -71,14 +71,13 @@ const Actor = () =>{
                                 <Link to={`/movie/${el.id}`}>
                                     <div className='movies-content'>
                                         <h4>{el.title}</h4>
-                                        <i><h4 className='as'>(as  {el.character})</h4></i>
+                                        {el.character ? <i><h4 className='as'>(as  {el.character})</h4></i> : ''}
                                     </div>
                                 </Link>
                             </div>
                         )}
                     </div>
-                </div>
-            }
+                </div>}
         </div>
     )
 }

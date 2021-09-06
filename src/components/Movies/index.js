@@ -1,10 +1,13 @@
 import {Link} from "react-router-dom";
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const Movies = ({movies}) =>{
     return (
-        <div className='grid-2' key={movies.id}>
+        <OwlCarousel className='owl-theme' items={8} margin={10} dots={false} key={movies.id}>
             {
-                movies.map(el =>
+                movies.filter(el => el.popularity > 2).map(el =>
                     <div className='box'>
                         <Link to={`/movie/${el.id}`} key={el.id}>
                             <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${el.poster_path}`} alt=""/>
@@ -13,7 +16,7 @@ const Movies = ({movies}) =>{
                     </div>
                 )
             }
-        </div>
+        </OwlCarousel>
     )
 }
 

@@ -20,5 +20,3 @@ function App() {
 export default App;
 //поиск search по фильмам -
 //prev next -
-//сколько лет актеру год, года, лет -
-//известные фильм -

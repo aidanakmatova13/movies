@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import Movies from "../components/Movies";
 import Loading from "../components/Loading";
+import MoviesList from "../components/Movieslist";
 
 const Page = () => {
     const [page, setPage] = useState(1)
@@ -29,7 +30,7 @@ const Page = () => {
                     )
                 }
             </div>
-            <Movies movies={movies}/>
+            <MoviesList movies={movies}/>
         </div>
 
     )
