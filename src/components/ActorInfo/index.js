@@ -11,7 +11,7 @@ const ActorInfo = ({actorInfo}) =>{
                         )}
                     </div>
                     <div><h4>Famous for:</h4>{actorInfo.known_for_department}</div>
-                    <div><h4>Birth place:</h4>{actorInfo.place_of_birth}</div>
+                    {actorInfo.place_of_birth ? <div><h4>Birth place:</h4>{actorInfo.place_of_birth}</div> : ''}
                     {actorInfo.birthday ? <div><h4>Birthday:</h4>{actorInfo.birthday}</div> : ''}
                     {
                         actorInfo.gender === 2 ? <div><h4>Gender:</h4> Male</div> : <div><h4>Gender:</h4> Female</div>

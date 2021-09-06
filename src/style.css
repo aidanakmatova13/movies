@@ -48,6 +48,7 @@ a{
     border: 1px solid black;
     margin-bottom: 20px;
     cursor: pointer;
+    margin-top: 20px;
 }
 .btn-primary{
     color: black;
