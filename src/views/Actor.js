@@ -11,6 +11,7 @@ const Actor = () =>{
     const [movies, setMovies] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [moviesLoading, setMoviesIsLoading] = useState(true)
+    const [movieLoading, setMovieIsLoading] = useState(true)
     const {id} = useParams()
     useEffect(() =>{
         axios(`https://api.themoviedb.org/3/person/${id}?api_key=6f19f87e3380315b9573c4270bfc863c`)
@@ -22,9 +23,10 @@ const Actor = () =>{
             .then(({data}) =>{
                 setMovies(data.cast)
                 setMoviesIsLoading(false)
+                setMovieIsLoading(false)
             })
     }, [id])
-    if (isLoading || moviesLoading){
+    if (isLoading || moviesLoading || movieLoading){
         return <Loading/>
     }
     return(
@@ -33,10 +35,26 @@ const Actor = () =>{
             {
                 <ActorInfo actorInfo={actorInfo}/>
             }
-            <h3>Movies:</h3>
-            <Movies movies={movies}/>
+            <h3>Famous for movies:</h3>
+            {/*<Movies movies={movies}/>*/}
+            {
+                <div>
+                    {movies.filter(el => !el.release_date).sort((a,b) => new Date(b) - new Date(b)).map(el =>
+                        <>
+                            <h3>{el.title}</h3>
+                        </>
+                    )}
+
+
+                    {movies.filter(el =>el.release_date).sort((a,b) => new Date(b) - new Date(b)).map(el =>
+                        <>
+                            <div>{el.release_date}</div>
+                            <h3>{el.title}</h3>
+                        </>
+                    )}
+                </div>
+            }
         </div>
     )
 }
-
 export default Actor;
