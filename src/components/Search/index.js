@@ -23,7 +23,6 @@ const Search = () =>{
     const prev = () =>{
         setPage(page-1)
     }
-
     const Btns = () =>{
         if (page===1){
             return <button className='next-prev' onClick={next}>NEXT  &#9658;</button>
@@ -47,9 +46,8 @@ const Search = () =>{
                 films.results.slice(0,8).map(film =>
                     <div className='box'>
                         <Link to={`/movie/${film.id}`} key={film.id}>
-                            {film.poster_path ? <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${film.poster_path}`} alt=""/> :
-                                <img height='320' src={empty} alt=""/>}
-                                    <h3>{film.original_title}</h3>
+                            {film.poster_path?<img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${film.poster_path}`} alt=""/>:<img height='320' src={empty} alt=""/>}
+                            <h3>{film.original_title}</h3>
                         </Link>
                     </div>
                 )
@@ -61,4 +59,5 @@ const Search = () =>{
         </div>
     )
 }
+
 export default Search;
