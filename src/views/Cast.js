@@ -2,7 +2,7 @@ import {useState} from "react";
 import axios from "axios";
 import {Link, useParams} from "react-router-dom";
 import Loading from "../components/Loading";
-import man from "../Image/avatar.jpg";
+import man from "../components/Image/avatar.jpg";
 import ButtonBack from "../components/ButtonBack";
 
 const Cast = () =>{

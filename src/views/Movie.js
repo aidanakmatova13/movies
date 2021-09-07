@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
-import man from '../Image/avatar.jpg';
+import man from '../components/Image/avatar.jpg';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';

@@ -17,24 +17,6 @@ const Page = () => {
     const handlePage = (num) => {
         setPage(num)
     }
-    const Btns = () =>{
-        if (page===1){
-            return <button className='next-prev' onClick={next}>NEXT  &#9658;</button>
-        } else if (page ===6){
-            return <button className='next-prev' onClick={prev}> &#9668;  PREV</button>
-        } else{
-            return <div>
-                <button className='next-prev' onClick={prev}> &#9668;  PREV</button>
-                <button className='next-prev' onClick={next}>NEXT  &#9658;</button>
-            </div>
-        }
-    }
-    const next = () =>{
-        setPage(page+1)
-    }
-    const prev = () =>{
-        setPage(page-1)
-    }
     if (isLoading){
         return <Loading/>
     }
@@ -48,9 +30,6 @@ const Page = () => {
                 }
             </div>
             <MoviesList movies={movies}/>
-            <div className='btn-np'>
-                <Btns/>
-            </div>
         </div>
 
     )
