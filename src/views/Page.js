@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import Movies from "../components/Movies";
 import Loading from "../components/Loading";
 import MoviesList from "../components/Movieslist";
 
@@ -14,9 +13,15 @@ const Page = () => {
                 setMovies(data.results)
                 setIsLoading(false)
             })
-    }, [page]) //required
+    }, [page])
     const handlePage = (num) => {
         setPage(num)
+    }
+    const next = () =>{
+        setPage(page-1)
+    }
+    const prev = () =>{
+        setPage(page+1)
     }
     if (isLoading){
         return <Loading/>
@@ -31,6 +36,10 @@ const Page = () => {
                 }
             </div>
             <MoviesList movies={movies}/>
+            <div className='btn-np'>
+                <button className='next-prev' onClick={prev}> &#9668;  PREV</button>
+                <button className='next-prev' onClick={next}>NEXT  &#9658;</button>
+            </div>
         </div>
 
     )
