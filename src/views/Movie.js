@@ -82,9 +82,9 @@ const Movie = () =>{
                         </div>
                     </div>
                 </div>
-                <h2>Cast:</h2>
+                <h2 className='cast'>Cast:</h2>
                 <div className='row'>
-                <OwlCarousel className='owl-theme' items={8} margin={10} dots={false}>
+                <OwlCarousel className='owl-theme' items={8} margin={10} >
                     {
                         actor.slice(0,10).map(el =>
                             <div className='box' key={el.id}>

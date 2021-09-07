@@ -19,6 +19,4 @@ function App() {
 
 export default App;
 
-
 // поиск search по фильмам -
-// prev next -

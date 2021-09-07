@@ -8,6 +8,9 @@
 body{
     background-color: black;
 }
+.cast{
+    margin-top: 50px;
+}
 img{
     width: 100%;
 }
@@ -21,6 +24,10 @@ img{
     padding: 0 15px;
 }
 .container{
+    max-width: 1000px;
+    margin: auto;
+}
+.header-container{
     max-width: 1170px;
     margin: auto;
 }
@@ -58,7 +65,7 @@ a{
     border: none;
     margin-bottom: 20px;
     cursor: pointer;
-    margin-top: 120px;
+    margin-top: 150px;
     padding: 4px;
     border-radius: 10px;
     font-size: 14px;
@@ -144,6 +151,10 @@ input{
 .as{
     margin-left: 10px;
     font-weight: lighter;
+}
+.character{
+    font-weight: lighter;
+    font-size: 16px;
 }
 h4{
     margin-left: 20px;
