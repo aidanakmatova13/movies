@@ -73,8 +73,9 @@ a{
     color: black;
     width: 21px;
     height: 30px;
-    font-size: 20px;
+    font-size: 16px;
     transition: .4s;
+    font-weight: bold;
 }
 .btns{
     text-align: center;
