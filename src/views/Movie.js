@@ -85,7 +85,7 @@ const Movie = () =>{
                         actor.slice(0,10).map(el =>
                             <div className='box' key={el.id}>
                                 <Link to={`/actor/${el.id}`} key={el.name}>
-                                    {el.profile_path === null ? <img src={man} alt="" height='165' width='300'/> :<img src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.profile_path}`} alt=""/>}
+                                    {el.profile_path === null ? <div className='actor-img'><img src={man} alt="" height='160px'/></div> :<div className='actor-img'><img height='160px' src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.profile_path}`} alt=""/></div>}
                                     <h3>{el.name}</h3>
                                 </Link>
                             </div>

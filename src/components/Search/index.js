@@ -51,7 +51,7 @@ const Search = () =>{
                     films.results.slice(0,8).map(film =>
                         <div className='box'>
                             <Link to={`/movie/${film.id}`} key={film.id}>
-                                {film.poster_path?<img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${film.poster_path}`} alt=""/>:<img height='320' src={empty} alt=""/>}
+                                {film.poster_path?<div className='img-box'><img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${film.poster_path}`} alt=""/></div>:<div className='img-box'><img src={empty} alt=""/></div>}
                                 <h3>{film.original_title}</h3>
                             </Link>
                         </div>

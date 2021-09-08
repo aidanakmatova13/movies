@@ -11,6 +11,12 @@ body{
 .cast{
     margin-top: 50px;
 }
+.img-box{
+    height: 320px;
+}
+.actor-img{
+    height: 200px;
+}
 img{
     width: 100%;
 }

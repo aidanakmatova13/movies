@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
+    "bootstrap": "^5.1.1",
     "cli-spinners": "^2.6.0",
     "dark-mode-toggle": "^0.8.0",
     "node-sass": "^6.0.1",
