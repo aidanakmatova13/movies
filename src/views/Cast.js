@@ -21,10 +21,10 @@ const Cast = () =>{
     return(
         <div className='container'>
             <ButtonBack/>
-            <div className='grid-2'>
+            <div className='grid-2' key={cast.id}>
                 {
                     cast.map(el =>
-                        <div className='box' key={el.id}>
+                        <div className='box'>
                             <Link to={`/actor/${el.id}`} key={el.name}>
                                 {el.profile_path === null ? <div className='img-box'><img src={man} alt="" height='100%'/></div> :<div className='img-box'><img height='100%' src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.profile_path}`} alt=""/></div>}
                                 <h3>{el.name}</h3>

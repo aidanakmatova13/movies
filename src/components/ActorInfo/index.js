@@ -4,7 +4,7 @@ const ActorInfo = ({actorInfo}) =>{
             <div className='grid'>
                 <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${actorInfo.profile_path}`} alt=""/>
                 <div>
-                    <h2>{actorInfo.name} ({new Date().getFullYear() - actorInfo.birthday.slice(0,4)}y)</h2>
+                    <h2>{actorInfo.name} ({new Date().getFullYear() - actorInfo.birthday?.slice(0,4)}y)</h2>
                     {actorInfo.biography ? <div><h3>Biography:</h3>{actorInfo.biography}</div> : ''}
                 </div>
             </div>
