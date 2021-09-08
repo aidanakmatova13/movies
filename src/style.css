@@ -25,6 +25,9 @@ img{
     margin: 0 -15px;
     flex-wrap: wrap;
 }
+.error{
+    text-align: center;
+}
 .col-3{
     width: 25%;
     padding: 0 15px;

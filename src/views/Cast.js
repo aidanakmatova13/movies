@@ -26,7 +26,7 @@ const Cast = () =>{
                     cast.map(el =>
                         <div className='box' key={el.id}>
                             <Link to={`/actor/${el.id}`} key={el.name}>
-                                {el.profile_path === null ? <div className='img-box'><img src={man} alt="" height='100%'/></div> :<div className='img-box'><img src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.profile_path}`} alt=""/></div>}
+                                {el.profile_path === null ? <div className='img-box'><img src={man} alt="" height='100%'/></div> :<div className='img-box'><img height='100%' src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.profile_path}`} alt=""/></div>}
                                 <h3>{el.name}</h3>
                             </Link>
                         </div>
