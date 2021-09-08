@@ -106,8 +106,8 @@ a{
 }
 .circle-fill{
     position: absolute;
-    top: 150px;
-    left: 100px;
+    top: 130px;
+    left: 70px;
 }
 .circle-fill polygon{
     transition: .2s;
