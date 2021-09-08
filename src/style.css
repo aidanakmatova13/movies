@@ -203,6 +203,7 @@ h4{
     background-color: #202020;
     padding: 50px 0;
     margin-top: 50px;
+    position: fixed;
 }
 .footer-logo{
     width: 150px;
