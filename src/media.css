@@ -24,6 +24,7 @@
 @media (max-width:480px) {
     .container {
         max-width: 400px;
+        background-color: rebeccapurple;
     }
     .grid-2{
         display: unset;
