@@ -15,6 +15,7 @@ function App() {
           <Route path='/search/:name'><Search/></Route>
           <Route path='/actor/:id'><Actor/></Route>
           <Route path='/cast/:id'><Cast/></Route>
+          {/*<Footer/>*/}
       </Router>
   );
 }
