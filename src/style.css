@@ -196,6 +196,9 @@ h4{
     margin-bottom: 40px;
     cursor: pointer;
 }
+body{
+    height: 100vh;
+}
 .margin-2{
     margin-top: 100px;
 }
