@@ -212,3 +212,7 @@ h4{
     align-items: center;
     justify-content: space-between;
 }
+.search-btn{
+    background-color: transparent;
+    border: none;
+}
