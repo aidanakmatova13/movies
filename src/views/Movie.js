@@ -75,11 +75,7 @@ const Movie = () =>{
                         </div>
                         {info.tagline ? <div><h4>Description:</h4><div><i>{info.tagline}</i></div>{info.overview}</div> : ''}
                         {info.budget ? <div><h4>Budget:</h4>{info.budget.toLocaleString()}$</div> : ''}
-                        <div>
-                            <h4>Revenue:
-                            </h4>
-                            {info.revenue.toLocaleString()}$
-                        </div>
+                        {info.revenue ? <div><h4>Revenue:</h4>{info.revenue.toLocaleString()}$</div> : ''}
                     </div>
                 </div>
                 <h2 className='cast'>Cast:</h2>
