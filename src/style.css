@@ -201,4 +201,14 @@ h4{
 }
 .footer{
     background-color: #202020;
+    padding: 60px 0;
+    margin-top: 50px;
+}
+.footer-logo{
+    width: 150px;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

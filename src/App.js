@@ -5,6 +5,7 @@ import Actor from "./views/Actor";
 import Cast from "./views/Cast";
 import Header from "./views/Header";
 import Search from "./components/Search";
+import Footer from './views/Footer'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path='/search/:name'><Search/></Route>
           <Route path='/actor/:id'><Actor/></Route>
           <Route path='/cast/:id'><Cast/></Route>
-          {/*<Footer/>*/}
+          <Footer/>
       </Router>
   );
 }
