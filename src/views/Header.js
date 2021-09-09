@@ -23,7 +23,7 @@ const Header = () =>{
     }
     return(
         <div className='header'>
-            <div className='header-content header-container'>
+            <div className='header-content container header-container'>
                 <Link to={'/'}>
                     <img className='logo-img' src={logo} alt=""/>
                 </Link>
