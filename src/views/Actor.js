@@ -54,7 +54,7 @@ const Actor = () =>{
                 </div>
                 <div>
                     <h3 className='margin'>Movies:</h3>
-                        {movies.filter(el => !el.release_date).sort((a,b) => new Date(a.release_date) - new Date(b.release_date)).map(el =>
+                        {movies.filter(el => !el.release_date).sort((a,b) => new Date(b.release_date) - new Date(a.release_date)).map(el =>
                             <div className='movies-content'>
                                 <div className='sign'>&#8212;   </div>
                                 <Link to={`/movie/${el.id}`}>
@@ -65,7 +65,7 @@ const Actor = () =>{
                                 </Link>
                             </div>
                         )}
-                        {movies.filter(el =>el.release_date).sort((a,b) => new Date(a.release_date) - new Date(b.release_date)).map(el =>
+                        {movies.filter(el =>el.release_date).sort((a,b) => new Date(b.release_date) - new Date(a.release_date)).map(el =>
                             <div className='movies-content'>
                                 <div>{el.release_date}</div>
                                 <Link to={`/movie/${el.id}`}>

@@ -21,7 +21,7 @@ const Page = () => {
         return <Loading/>
     }
     return (
-        <div className='container'>
+        <div className='container my-5'>
             <div className='btns'>
                 {
                     Array(6).fill(0).map((el, idx) =>
