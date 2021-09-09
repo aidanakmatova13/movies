@@ -17,7 +17,7 @@ const Page = () => {
     const handlePage = (num) => {
         setPage(num)
     }
-    if (isLoading){
+    if (isLoading) {
         return <Loading/>
     }
     return (
@@ -25,7 +25,7 @@ const Page = () => {
             <div className='btns'>
                 {
                     Array(6).fill(0).map((el, idx) =>
-                        <button className='btn' onClick={() => handlePage(idx+1)}>{idx+1}</button>
+                        <button className='btn' onClick={() => handlePage(idx + 1)}>{idx + 1}</button>
                     )
                 }
             </div>

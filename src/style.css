@@ -1,69 +1,86 @@
-*{
+* {
     box-sizing: border-box;
     font-family: 'Slabo 27px', serif;
     color: whitesmoke;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: black;
 }
-.cast{
+
+.cast {
     margin-top: 50px;
 }
-.img-box{
+
+.img-box {
     height: 320px;
 }
-.actor-img{
+
+.actor-img {
     height: 200px;
 }
-img{
+
+img {
     width: 100%;
 }
-.row{
+
+.row {
     display: flex;
     margin: 0 -15px;
     flex-wrap: wrap;
 }
-.error{
+
+.error {
     text-align: center;
 }
-.col-3{
+
+.col-3 {
     width: 25%;
     padding: 0 15px;
 }
-.container{
+
+.container {
     max-width: 1000px;
     margin: auto;
 }
-.header-container{
+
+.header-container {
     max-width: 1170px;
     margin: auto;
 }
-.grid{
+
+.grid {
     display: grid;
     grid-template-columns: 1.5fr 2fr;
     grid-column-gap: 50px;
 }
-.flex{
+
+.flex {
     display: flex;
     align-items: center;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.backk{
+
+.backk {
     width: 30px;
 }
-.search-btn{
+
+.search-btn {
     width: 20px;
     margin-left: 10px;
     transition: .4s;
 }
-.search-btn:hover{
+
+.search-btn:hover {
     transform: scale(.8);
 }
-.btn{
+
+.btn {
     margin-bottom: 40px;
     margin-top: 170px;
     cursor: pointer;
@@ -77,13 +94,20 @@ a{
     transition: .4s;
     font-weight: bold;
 }
-.btns{
+
+.btns {
     text-align: center;
 }
-.btn:hover{
+
+.loading {
+    padding: 200px 0;
+}
+
+.btn:hover {
     background-color: navajowhite;
 }
-.back-btn{
+
+.back-btn {
     background-color: transparent;
     color: black;
     border: none;
@@ -95,51 +119,63 @@ a{
     font-size: 14px;
     transition: .4s;
 }
-.back-btn:hover{
+
+.back-btn:hover {
     margin-left: -5px;
 }
-.btn-primary{
+
+.btn-primary {
     color: black;
     cursor: pointer;
     position: relative;
 }
-.grid-2{
+
+.grid-2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
 }
-.circle-fill{
+
+.circle-fill {
     position: absolute;
     top: 130px;
     left: 70px;
 }
-.circle-fill polygon{
+
+.circle-fill polygon {
     transition: .2s;
 }
-.circle-fill:hover polygon{
+
+.circle-fill:hover polygon {
     fill: grey;
 }
+
 body.light-mode {
     background-color: #fff;
     color: #333;
     transition: background-color 0.3s ease;
 }
+
 body.dark-mode {
     background-color: #1a1919;
     color: #999;
 }
-.box{
+
+.box {
     transition: .6s;
     padding: 5px;
 }
-.box:hover{
+
+.box:hover {
     box-shadow: -1px -5px 32px 0 rgba(255, 255, 255, 0.2);
     transform: scale(0.9);
 }
-.trailer{
+
+.trailer {
     margin-top: 30px;
 }
-input{
+
+input {
     background-color: whitesmoke;
     border: none;
     border-radius: 20px;
@@ -149,54 +185,66 @@ input{
     padding: 15px;
     font-size: 17px;
 }
-.header-content{
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.logo-img{
+
+.logo-img {
     width: 140px;
 }
-.header{
+
+.header {
     background-color: #ffffff20;
     position: fixed;
     width: 100%;
 }
-.search-content{
+
+.search-content {
     display: flex;
 }
-.search{
+
+.search {
     width: 50px;
 }
-.movies-content{
+
+.movies-content {
     display: flex;
     align-items: center;
 }
-.as{
+
+.as {
     margin-left: 10px;
     font-weight: lighter;
 }
-.character{
+
+.character {
     font-weight: lighter;
     font-size: 16px;
 }
-h4{
+
+h4 {
     margin-left: 20px;
     margin-top: 10px;
 }
 
-.sign{
+.sign {
     margin-right: 25px;
     margin-left: 25px;
 }
-.margin{
+
+.margin {
     margin-top: 40px;
     margin-bottom: 30px;
 }
-.btn-np{
+
+.btn-np {
     text-align: center;
 }
-.next-prev{
+
+.next-prev {
     background-color: #EB9600;
     color: #1a1919;
     border: none;
@@ -206,49 +254,36 @@ h4{
     margin-bottom: 40px;
     cursor: pointer;
 }
-body{
+
+body {
     height: 100vh;
 }
-.margin-2{
+
+.margin-2 {
     margin-top: 100px;
 }
-.footer{
+
+.footer {
     background-color: #202020;
     padding: 50px 0;
     margin-top: 50px;
 }
-.footer-logo{
+
+.footer-logo {
     width: 150px;
 }
-.footer-content{
+
+.footer-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.error{
+
+.error {
     color: white;
 }
-.search-btn{
+
+.search-btn {
     background-color: transparent;
     border: none;
 }
-
-/*import {useState} from "react";*/
-/*import { css } from "@emotion/react";*/
-/*import ClipLoader from "react-spinners/ClipLoader";*/
-
-/*const Loading = () =>{*/
-/*                        let [color, setColor] = useState("#ffffff");*/
-/*                        let [loading, setLoading] = useState(true);*/
-/*                        const override = css`*/
-/*                        display: block;*/
-/*                        margin: 0 auto;*/
-/*                        border-color: red;*/
-/*                        `;*/
-/*return(*/
-/*<div className='container'>*/
-/*                          <ClipLoader color={color} loading={loading} css={override} size={150} />*/
-/*                                                                                                 </div>*/
-/*)*/
-/*}*/
-/*export default Loading*/
